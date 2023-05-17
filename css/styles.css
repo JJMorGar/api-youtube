@@ -1,13 +1,15 @@
 :root {
-  --primario: #e63946;
+  --primario: #222837;
   --blanco: #f1faee;
-  --negro: #1d3557;
+  --negro: #0e1b2e;
   --fuentePrincipal: "Roboto", sans-serif;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  background-color: var(--negro);
+  font-family: var(--fuentePrincipal);
 }
 
 *,
@@ -51,13 +53,88 @@ img {
 }
 
 [class$="__heading"] {
-  text-align: center;
-  margin-bottom: 5rem;
+  text-align: left;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
 }
-
 .header {
+  background-color: var(--primario);
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: #a8b0c539 solid 3px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.header__search {
+  flex-basis: 60rem;
+  display: flex;
+  align-items: center;
+}
+.header__input {
+  color: var(--blanco);
+  padding: 0.6rem;
+  padding-left: 2rem;
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 3rem 0 0 3rem;
+  border: none;
+  background-color: #0e1b2e;
+  border: rgba(255, 255, 255, 0.46) 1px solid;
+}
+.header__input:focus,
+.header__input:active {
+  outline: none;
+  border: white 1px solid;
+}
+.header__submit {
+  padding: 1rem;
+  border: none;
+  border-radius: 0 3rem 3rem 0;
+  width: 15rem;
+  cursor: pointer;
   background-color: var(--negro);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.header__logo {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
 }
 
+.main__container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: 2rem;
+}
 
+.descripccion {
+  border-top: solid rgba(255, 255, 255, 0.028) 4px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
 
+.comentarios {
+  padding-left: 2rem;
+  grid-row: 1/ 3 ;
+  grid-column: 2/3;
+  border-left: solid rgba(255, 255, 255, 0.028)  2px;
+}
+
+.vide__iframe {
+  border-radius: 2rem;
+  height: 50rem;
+}
+
+.recomendados {
+  border-top: solid rgba(255, 255, 255, 0.028) 4px;
+  grid-column: 1/4;
+}

@@ -13,50 +13,56 @@
       rel="stylesheet"
     />
     <!-- estilos -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__container">
         <div class="header__logo">
-          <img
-            width="150px"
-            src="https://i.blogs.es/b44509/youtubealt/1366_2000.webp"
-            alt="logo yutub"
-          />
+          <img src="img/logoyutub.png" alt="logo yutub" />
         </div>
 
         <div class="header__search">
-          <input type="text" id="search" name="search" />
-          <input type="submit" data-accion="buscar" />
+          <input class="header__input" type="text" id="search" name="search" />
+          <input
+            class="header__submit"
+            type="submit"
+            data-accion="buscar"
+            value="👀"
+          />
         </div>
       </div>
     </header>
+    <main class="main">
+      <div class="main__container">
+        <section class="video">
+          <iframe
+            class="vide__iframe"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/3Lt2kuxPIcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
 
-    <section class="video">
-      <div class="video__container">
-        <iframe
-          class="video"
-          src="https://www.youtube.com/watch?v=n8x-PKIxCIc"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <section class="descripccion">
+          <h3 class="descripccion__heading">descripccion</h3>
+        </section>
+
+        <section class="comentarios">
+         <h3 class="cometarios__heading">comentarios</h3>
+        </section>
+
+        <section class="recomendados">
+          <h3 class="recomendados__heading">video relacionados</h3>
+        </section>
+
+
       </div>
-    </section>
-
-    <section class="descripccion">
-      <div class="descripccion__container">
-
-      </div>
-    </section>
-
-    <section class="comentarios">
-      <div class="comentarios__container">
-
-      </div>
-    </section>
-
+    </main>
   </body>
 </html>
